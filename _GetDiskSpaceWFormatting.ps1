@@ -1,0 +1,1 @@
+Get-Volume | where("driveletter") | ft DriveLetter, @{Label="Size"; Expression={"{0:N2} GB" -f ($_.Size/1GB)}}, @{Label="SizeRemaining"; Expression={"{0:N2} GB" -f ($_.SizeRemaining/1GB)}}, @{Label="Percent Free";Expression= {"{0:P}" -f ($_.sizeremaining / $_.size)}}

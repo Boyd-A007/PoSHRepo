@@ -1,0 +1,1 @@
+$CInfo = Get-ComputerInfo

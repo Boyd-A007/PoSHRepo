@@ -1,0 +1,1 @@
+﻿Get-AppxProvisionedPackage -Online | where{$_.displayname -like "*Zune*"} | %{Remove-AppxProvisionedPackage -online -PackageName "$($_.PackageName)" -AllUsers}
